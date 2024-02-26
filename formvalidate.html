@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function data() {
+            var a = document.querySelector('input[name="userId"]').value;
+            var b = document.querySelector('input[name="contactNo"]').value;
+            var c = document.querySelector('input[name="password"]').value;
+            var d = document.querySelector('input[name="confirmPassword"]').value;
+
+            if (a === "" || b === "" || c === "" || d === "") {
+                alert("All fields are mandatory");
+                return false;
+            } else if (b.length !== 10) {
+                alert("Number should be of 10 digits! Please enter a valid number");
+                return false;
+            } else if (!/^\d+$/.test(b)) {
+                alert("This is not a valid number! Only numbers are allowed");
+                return false;
+            } else if (c !== d) {
+                alert("Please enter the same password");
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+    <form onsubmit="return data()">
+       UserId: <input type="text" name="userId"><br>
+       Contact No: <input type="text" name="contactNo"><br>
+       Password: <input type="password" name="password"><br>
+       Confirm Password: <input type="password" name="confirmPassword"><br>
+       <input type="Submit" value="Submit your data"> 
+    </form>
+</body>
+</html>
