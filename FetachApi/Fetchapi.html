@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fetchapi.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div class="header">
+            <h1>What Does Your Name says it Personality</h1>
+
+        </div>
+
+        <div class="center">
+            
+            <div class="details">
+                <h2>Enter your name</h2>
+                <input type="text" id="name">
+            
+        </div>
+        <div class="image">
+            <img src="/images/IMAGE.jpg" width="200" height="200" id="imgchange">
+        </div>
+      <div class="btn">
+        <button>click me</button>
+    </div>
+    </div>
+    </section>
+
+
+    <script src="fetchapi.js"> 
+        fetch('hhtps://jsonplaceholder.typicode.com/users')
+        .then(res=>{
+            console.log(res);
+        })
+    </script>
+</body>
+</html>
